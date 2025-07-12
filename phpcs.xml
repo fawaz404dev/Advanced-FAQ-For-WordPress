@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<ruleset name="Advanced FAQ WordPress Plugin">
+    <description>PHP CodeSniffer configuration for Advanced FAQ WordPress Plugin</description>
+
+    <!-- What to scan -->
+    <file>.</file>
+    
+    <!-- Exclude patterns -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/tests/*</exclude-pattern>
+    <exclude-pattern>/build/*</exclude-pattern>
+    <exclude-pattern>/dist/*</exclude-pattern>
+    <exclude-pattern>*.min.js</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>/languages/*</exclude-pattern>
+    <exclude-pattern>/screenshots/*</exclude-pattern>
+
+    <!-- How to scan -->
+    <arg value="sp"/> <!-- Show sniff and progress -->
+    <arg name="basepath" value="./"/> <!-- Strip the file paths down to the relevant bit -->
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="8"/> <!-- Enables parallel processing when available for faster results -->
+
+    <!-- Rules: Check PHP version compatibility -->
+    <config name="testVersion" value="7.4-"/>
+    
+    <!-- Rules: WordPress Coding Standards -->
+    <rule ref="WordPress-Core">
+        <!-- Allow short array syntax -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+        
+        <!-- Allow multiple assignments -->
+        <exclude name="Squiz.PHP.DisallowMultipleAssignments"/>
+        
+        <!-- Allow yoda conditions to be optional -->
+        <exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+    </rule>
+    
+    <rule ref="WordPress-Docs"/>
+    
+    <rule ref="WordPress-Extra">
+        <!-- Allow short ternary operator -->
+        <exclude name="WordPress.PHP.DisallowShortTernary"/>
+    </rule>
+
+    <!-- Rules: WordPress VIP -->
+    <rule ref="WordPress-VIP-Go">
+        <!-- Allow filesystem functions for plugin activation/deactivation -->
+        <exclude name="WordPress.VIP.FileSystemWritesDisallow"/>
+        
+        <!-- Allow direct database queries for plugin-specific tables -->
+        <exclude name="WordPress.DB.DirectDatabaseQuery"/>
+    </rule>
+
+    <!-- Check for PHP cross-version compatibility -->
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- Rules: Security -->
+    <rule ref="WordPress.Security"/>
+
+    <!-- Rules: Performance -->
+    <rule ref="WordPress.Performance"/>
+
+    <!-- Rules: Database -->
+    <rule ref="WordPress.DB">
+        <!-- Allow direct database queries for plugin-specific operations -->
+        <exclude name="WordPress.DB.DirectDatabaseQuery.DirectQuery"/>
+        <exclude name="WordPress.DB.DirectDatabaseQuery.NoCaching"/>
+    </rule>
+
+    <!-- Rules: Internationalization -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="advanced-faq-wp"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Rules: Prefix all globals -->
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="afaq"/>
+                <element value="AFAQ"/>
+                <element value="advanced_faq"/>
+                <element value="ADVANCED_FAQ"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Rules: File naming -->
+    <rule ref="WordPress.Files.FileName">
+        <properties>
+            <property name="strict_class_file_names" value="false"/>
+        </properties>
+    </rule>
+
+    <!-- Rules: Array syntax -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+    <!-- Rules: Code analysis -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+
+    <!-- Rules: Formatting -->
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+
+    <!-- Rules: PHP -->
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+
+    <!-- Rules: Strings -->
+    <rule ref="Generic.Strings.UnnecessaryStringConcat">
+        <properties>
+            <property name="allowMultiline" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- Rules: White space -->
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="4"/>
+            <property name="tabIndent" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- Custom rules for this plugin -->
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
+        <exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
+    </rule>
+
+    <!-- Allow short description in file headers -->
+    <rule ref="Squiz.Commenting.FileComment">
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
+    </rule>
+
+    <!-- Allow WordPress-style hook documentation -->
+    <rule ref="Squiz.Commenting.InlineComment">
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+    </rule>
+
+    <!-- Minimum supported WordPress version -->
+    <config name="minimum_supported_wp_version" value="5.0"/>
+
+    <!-- Show progress and use colors -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+
+</ruleset>

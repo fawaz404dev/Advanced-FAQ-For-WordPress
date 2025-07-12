@@ -1,0 +1,183 @@
+{
+  "name": "advanced-faq-wordpress",
+  "version": "1.0.0",
+  "description": "Advanced FAQ plugin for WordPress with Schema.org support, responsive design, and RTL language support",
+  "main": "assets/js/frontend.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint assets/js/**/*.js",
+    "lint:fix": "eslint assets/js/**/*.js --fix",
+    "lint:css": "stylelint assets/css/**/*.css",
+    "lint:css:fix": "stylelint assets/css/**/*.css --fix",
+    "format": "prettier --write assets/js/**/*.js assets/css/**/*.css",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "webpack --mode=production",
+    "build:css": "postcss assets/css/frontend.css -o assets/css/frontend.min.css",
+    "dev": "npm run dev:js && npm run dev:css",
+    "dev:js": "webpack --mode=development --watch",
+    "dev:css": "postcss assets/css/frontend.css -o assets/css/frontend.min.css --watch",
+    "watch": "npm run dev",
+    "clean": "rimraf assets/js/*.min.js assets/css/*.min.css",
+    "validate": "npm run lint && npm run test",
+    "prepare": "npm run build",
+    "preversion": "npm run validate",
+    "version": "npm run build && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "faq",
+    "schema",
+    "seo",
+    "arabic",
+    "rtl",
+    "responsive",
+    "javascript",
+    "css"
+  ],
+  "author": {
+    "name": "Fawzi Gomaa",
+    "email": "info@fjomah.com",
+    "url": "https://fjomah.com"
+  },
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://fjomah.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fjomah/advanced-faq-wordpress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fjomah/advanced-faq-wordpress/issues",
+    "email": "info@fjomah.com"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@wordpress/eslint-plugin": "^13.0.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^9.0.0",
+    "css-loader": "^6.7.0",
+    "cssnano": "^5.1.0",
+    "eslint": "^8.30.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^7.8.0",
+    "prettier": "^2.8.0",
+    "rimraf": "^4.0.0",
+    "stylelint": "^14.16.0",
+    "stylelint-config-wordpress": "^17.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "dependencies": {},
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/js/setup.js"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/js/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "assets/js/**/*.js",
+      "!assets/js/**/*.min.js"
+    ],
+    "coverageDirectory": "tests/coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@wordpress/eslint-plugin/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "globals": {
+      "wp": "readonly",
+      "jQuery": "readonly",
+      "$": "readonly",
+      "AFAQ": "writable"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "error",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-wordpress"
+    ],
+    "rules": {
+      "at-rule-empty-line-before": null,
+      "comment-empty-line-before": null,
+      "declaration-empty-line-before": null,
+      "rule-empty-line-before": null
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "printWidth": 80
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "> 1%",
+              "last 2 versions",
+              "not dead",
+              "not ie 11"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 3,
+        "features": {
+          "nesting-rules": true,
+          "custom-properties": true
+        }
+      },
+      "autoprefixer": {},
+      "cssnano": {
+        "preset": "default"
+      }
+    }
+  }
+}

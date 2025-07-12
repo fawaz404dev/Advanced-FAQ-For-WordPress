@@ -1,0 +1,207 @@
+# Advanced FAQ for WordPress
+# Copyright (C) 2024 فوزي جمعة
+# This file is distributed under the same license as the Advanced FAQ for WordPress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced FAQ for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: info@fjomah.com\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: فوزي جمعة <info@fjomah.com>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#: advanced-faq-for-wordpress.php:10
+msgid "Advanced FAQ for WordPress"
+msgstr "الأسئلة الشائعة المتقدمة للوردبريس"
+
+#: advanced-faq-for-wordpress.php:12
+msgid "إضافة الأسئلة الشائعة المتقدمة للوردبريس مع ويدجت يظهر في نهاية المقالات وسكيما متوافقة مع محركات البحث"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:14
+msgid "فوزي جمعة"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:108
+#: advanced-faq-for-wordpress.php:113
+msgid "الأسئلة الشائعة"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:122
+#: admin/admin-page.php:45
+msgid "إدارة الأسئلة"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:131
+#: admin/settings-page.php:25
+msgid "الإعدادات"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:143
+msgid "إعدادات الأسئلة الشائعة"
+msgstr ""
+
+#: advanced-faq-for-wordpress.php:152
+msgid "إظهار الأسئلة الشائعة في هذه المقالة"
+msgstr ""
+
+#: admin/admin-page.php:25
+msgid "تم إضافة السؤال بنجاح!"
+msgstr ""
+
+#: admin/admin-page.php:35
+msgid "إضافة سؤال جديد"
+msgstr ""
+
+#: admin/admin-page.php:42
+msgid "السؤال"
+msgstr ""
+
+#: admin/admin-page.php:49
+msgid "الإجابة"
+msgstr ""
+
+#: admin/admin-page.php:61
+msgid "ترتيب العرض"
+msgstr ""
+
+#: admin/admin-page.php:64
+msgid "الرقم الأصغر يظهر أولاً"
+msgstr ""
+
+#: admin/admin-page.php:68
+msgid "إضافة السؤال"
+msgstr ""
+
+#: admin/admin-page.php:75
+msgid "الأسئلة الموجودة"
+msgstr ""
+
+#: admin/admin-page.php:78
+msgid "لا توجد أسئلة شائعة حتى الآن. قم بإضافة السؤال الأول!"
+msgstr ""
+
+#: admin/admin-page.php:85
+msgid "تعديل"
+msgstr ""
+
+#: admin/admin-page.php:86
+msgid "حذف"
+msgstr ""
+
+#: admin/admin-page.php:87
+msgid "الترتيب"
+msgstr ""
+
+#: admin/settings-page.php:15
+msgid "تم حفظ الإعدادات بنجاح!"
+msgstr ""
+
+#: admin/settings-page.php:35
+msgid "عنوان الويدجت"
+msgstr ""
+
+#: admin/settings-page.php:38
+msgid "العنوان الذي سيظهر أعلى قسم الأسئلة الشائعة"
+msgstr ""
+
+#: admin/settings-page.php:44
+msgid "موضع الويدجت"
+msgstr ""
+
+#: admin/settings-page.php:47
+msgid "بعد محتوى المقالة"
+msgstr ""
+
+#: admin/settings-page.php:48
+msgid "قبل محتوى المقالة"
+msgstr ""
+
+#: admin/settings-page.php:50
+msgid "اختر مكان ظهور الأسئلة الشائعة في المقالة"
+msgstr ""
+
+#: admin/settings-page.php:55
+msgid "خيارات العرض"
+msgstr ""
+
+#: admin/settings-page.php:59
+msgid "تفعيل سكيما محركات البحث (Schema.org)"
+msgstr ""
+
+#: admin/settings-page.php:64
+msgid "إظهار الإجابات مفتوحة افتراضياً"
+msgstr ""
+
+#: admin/settings-page.php:69
+msgid "إظهار أرقام الأسئلة"
+msgstr ""
+
+#: admin/settings-page.php:76
+msgid "سرعة الحركة (بالميلي ثانية)"
+msgstr ""
+
+#: admin/settings-page.php:79
+msgid "سرعة فتح وإغلاق الإجابات (0 = بدون حركة، 300 = متوسط، 600 = بطيء)"
+msgstr ""
+
+#: admin/settings-page.php:85
+msgid "CSS مخصص"
+msgstr ""
+
+#: admin/settings-page.php:88
+msgid "أضف CSS مخصص لتخصيص مظهر الأسئلة الشائعة"
+msgstr ""
+
+#: admin/settings-page.php:92
+msgid "حفظ الإعدادات"
+msgstr ""
+
+#: admin/settings-page.php:99
+msgid "معلومات الإضافة"
+msgstr ""
+
+#: admin/settings-page.php:102
+msgid "كيفية الاستخدام"
+msgstr ""
+
+#: admin/settings-page.php:115
+msgid "مميزات الإضافة"
+msgstr ""
+
+#: admin/settings-page.php:125
+msgid "معلومات المطور"
+msgstr ""
+
+#: assets/js/admin.js:150
+msgid "هل أنت متأكد من حذف هذا السؤال؟"
+msgstr ""
+
+#: assets/js/admin.js:200
+msgid "تم حفظ التغييرات بنجاح!"
+msgstr ""
+
+#: assets/js/admin.js:202
+msgid "حدث خطأ"
+msgstr ""
+
+#: assets/js/admin.js:210
+msgid "حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى."
+msgstr ""
+
+#: assets/js/admin.js:250
+msgid "تم حذف السؤال بنجاح!"
+msgstr ""
+
+#: assets/js/admin.js:255
+msgid "لا توجد أسئلة شائعة"
+msgstr ""
+
+#: assets/js/admin.js:256
+msgid "قم بإضافة السؤال الأول باستخدام النموذج أعلاه!"
+msgstr ""

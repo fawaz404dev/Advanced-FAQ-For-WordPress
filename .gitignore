@@ -1,0 +1,307 @@
+# WordPress
+*.log
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/mu-plugins/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+# WordPress Multisite
+wp-content/blogs.dir/
+wp-content/blog-deleted/
+wp-content/blog-inactive/
+wp-content/blog-suspended/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PHP
+/vendor/
+composer.phar
+composer.lock
+.phpunit.result.cache
+
+# PHPStorm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Build tools
+build/
+dist/
+*.min.js
+*.min.css
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Compass
+.compass/
+
+# LESS
+*.css
+
+# Grunt
+.grunt/
+
+# Gulp
+gulpfile.js
+
+# Webpack
+webpack.config.js
+webpack.mix.js
+
+# Laravel Mix
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Testing
+/tests/coverage/
+/tests/tmp/
+/tests/_output/
+
+# Documentation
+/docs/_build/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# Configuration files (keep templates)
+config.php
+settings.php
+!config-sample.php
+!settings-sample.php
+
+# Security
+.htaccess
+.htpasswd
+robots.txt
+
+# Plugin specific
+/screenshots/
+/assets/screenshots/
+*.pot~
+
+# Development tools
+.phpcs.xml
+.phpmd.xml
+.scrutinizer.yml
+.travis.yml
+.github/
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Local development
+.local
+.dev
+.test
+
+# Certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional cache
+.cache
+
+# Temporary files
+*.tmp
+*.temp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Build artifacts
+build/
+dist/
+lib/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment files
+.env*
+!.env.example
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Linting
+.eslintcache
+.stylelintcache
